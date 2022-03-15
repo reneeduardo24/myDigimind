@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/drawable-v24/ic_baseline_note_add_24.xml" value="0.3635" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/drawable-v24/ic_baseline_speaker_notes_24.xml" value="0.3635" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/layout/fragment_dashboard.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/layout/fragment_home.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/layout/fragment_notifications.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/layout/recordatorio.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/Rene Hernandez/Documents/Ciclo 2022/App Moviles/myDigimind/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
