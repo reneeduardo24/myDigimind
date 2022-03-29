@@ -1,5 +1,6 @@
 package hernandez.rene.mydigimind.ui.home
 
+import Task
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,46 +8,50 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import hernandez.rene.mydigimind.databinding.FragmentHomeBinding
 import android.widget.BaseAdapter as BaseAdapter
 import hernandez.rene.mydigimind.R
+import hernandez.rene.mydigimind.adaptadorTareas
 import hernandez.rene.mydigimind.ui.Recordatorio
 
 class HomeFragment : Fragment() {
-    var adapter: Adapter? = null
-    var rec = ArrayList<Recordatorio>()
+    var tasks: ArrayList<Task> = ArrayList<Task>()
+    private var _binding: FragmentHomeBinding? = null
 
-    private lateinit var homeViewModel: HomeViewModel
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        var listener: HomeFragment
-        var gridNote : GridView = root.findViewById(R.id.gridView)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-        var nombre = arguments?.getString("nombre")
-        var dias = arguments?.getString("dias")
-        var tiempo = arguments?.getString("tiempo")
+        val gridView: GridView = binding.gridView
 
-        if (nombre == null)
-            nombre = "Practice"
-        if (dias == null)
-            dias = "Everyday"
-        if (tiempo == null)
-            tiempo = "17:00"
-
-        rec.add(Recordatorio(nombre, dias, tiempo))
-
-        adapter = Adapter(this.context, rec)
-        gridNote.adapter = adapter
-
+        fillTasks()
+        val adaptador = adaptadorTareas(root.context, tasks)
+        gridView.adapter = adaptador
         return root
+    }
+
+    fun fillTasks() {
+
+
+        tasks.add(Task("Practice 1","Tuesday","17:30"))
+        tasks.add(Task("Practice 2","Monday, Saturday","17:00"))
+        tasks.add(Task("Practice 3","Wednesday","14:00"))
+        tasks.add(Task("Practice 4","Saturday","11:00"))
+        tasks.add(Task("Practice 5","Friday","13:00"))
+        tasks.add(Task("Practice 6","Thursday","10:40"))
+        tasks.add(Task("Practice 7","Monday","12:00"))
+
     }
 }
 
